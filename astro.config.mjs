@@ -6,9 +6,9 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://ggbeng1.github.io/GGbengSite/',
+	site: 'https://ggbeng1.github.io/',
 	outDir: './docs',
-  base: './',
+  base: '/GGbengSite',
 	// Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
 	sitemap: true,
 	// Generate sitemap (set to "false" to disable)
