@@ -82,19 +82,19 @@ export class ThemeSwitcher extends LitElement {
 	private _setTheme(theme) {
 		this._doc.setAttribute('data-theme', theme);
 		if (theme === 'default') {
-			this._heroImage.src = '/GGbengSite/assets/images/home/classic-hero.jpg';
+			this._heroImage.src = '/assets/images/home/classic-hero.jpg';
 		}
 		if (theme === 'dark') {
-			this._heroImage.src = '/GGbengSite/assets/images/home/dark-hero.jpg';
+			this._heroImage.src = '/assets/images/home/dark-hero.jpg';
 		}
 		if (theme === 'earth') {
-			this._heroImage.src = '/GGbengSite/assets/images/home/earth-hero.jpg';
+			this._heroImage.src = '/assets/images/home/earth-hero.jpg';
 		}
 		if (theme === 'ocean') {
-			this._heroImage.src = '/GGbengSite/assets/images/home/ocean-hero.jpg';
+			this._heroImage.src = '/assets/images/home/ocean-hero.jpg';
 		}
 		if (theme === 'sand') {
-			this._heroImage.src = '/GGbengSite/assets/images/home/sand-hero.jpg';
+			this._heroImage.src = '/assets/images/home/sand-hero.jpg';
 		}
 		localStorage.setItem('theme', theme);
 		this.theme = theme;

@@ -1,7 +1,7 @@
 export const nav = [
 	{
 		title: 'Home',
-		slug: '/GGbengSite/',
+		slug: '/',
 	},
 	// {
 	// 	title: 'Blog',

@@ -26,7 +26,7 @@ export const footerLists = [
 		items: [
 			{
 				title: 'Home',
-				slug: '/GGbengSite',
+				slug: '',
 			},
 		],
 	},
@@ -39,7 +39,7 @@ export const footerLists = [
 			// },
 			{
 				title: 'Blog',
-				slug: '/GGbengSite/blog',
+				slug: '/blog',
 			},
 			// {
 			// 	title: 'Contact',
