@@ -1,3 +1,7 @@
+[[plugins]]
+package = "@algolia/netlify-plugin-crawler"
+  [plugins.inputs]
+  branches = ['main']
 [build.environment]
   NPM_FLAGS = "--version" # prevent Netlify npm install
 [build]
