@@ -3,7 +3,7 @@
 		<div class="form-field__container">
 			<input type="text" placeholder="hello@example.com" v-model="email" />
 		</div>
-		<button class="btn" rel="noopener noreferrer" @click="handlerSubmit">
+		<button class="btn" rel="noopener noreferrer">
 			Submit
 			<span class="material-icons">chevron_right</span>
 		</button>
@@ -11,28 +11,10 @@
 </template>
 
 <script setup>
-import mailchimp from '@mailchimp/mailchimp_marketing';
+// import mailchimp from '@mailchimp/mailchimp_marketing';
 import { ref } from 'vue';
 const email = ref('');
-mailchimp.setConfig({
-	apiKey: '3077ffc62176e3201ccf41d8cec40ef2-us14',
-	server: 'us14', // e.g. us1
-});
-const handlerSubmit = async a => {
-	const url = `https://us14.api.mailchimp.com/3.0/lists/64683b0612/members`;
 
-	const { data } = await fetch(url, {
-		method: 'POST',
-		mode: 'no-cors',
-		headers: {
-			'Content-Type': 'application/json',
-			Authorization: `auth 3077ffc62176e3201ccf41d8cec40ef2-us14`,
-		},
-		body: JSON.stringify({
-			email_address: '15010976823@163.com',
-			status: 'subscribed',
-		}), // body data type must match "Content-Type" header
-	});
 	// let reg =
 	// 	/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
 	// if (reg.test(email.value)) {
@@ -45,8 +27,8 @@ const handlerSubmit = async a => {
 	// 	.then(res => {
 	// 		console.log(res, 555);
 	// 	});
-};
-defineExpose({ handlerSubmit });
+// };
+// defineExpose({ handlerSubmit });
 </script>
 
 <style>

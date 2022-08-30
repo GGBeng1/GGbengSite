@@ -1,7 +1,27 @@
 ---
-import { Container, FeatureCard } from '@odyssey-theme/components';
+import { Container, BlogPostsList } from '@odyssey-theme/components';
 import Layout from '../layouts/Page.astro';
 import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
+import { parse, isBefore } from 'date-fns';
+
+const posts = await Astro.glob('../pages/blog/posts/*.mdx').then(posts =>
+	posts
+		.map(({ frontmatter, url }) => ({
+			title: frontmatter.title,
+			description: frontmatter.description,
+			authors: frontmatter.authors,
+			publishDate: parse(frontmatter.publishDate, 'MMMM d, yyyy', new Date()),
+			featuredImage: frontmatter.featuredImage,
+			excerpt: frontmatter.excerpt,
+			href: url,
+		}))
+		.sort((a, b) => {
+			if (isBefore(a.publishDate, b.publishDate)) return 1;
+			if (isBefore(b.publishDate, a.publishDate)) return -1;
+			return 0;
+		})
+		.splice(0, 2)
+);
 ---
 
 <Layout>
@@ -9,79 +29,12 @@ import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro'
 	<Container>
 		<section class="feature-card__section">
 			<h2>最近更新的 blog</h2>
-			<p>
-				下面是最近更新的博客
-			</p>
+			<p>下面是最近更新的博客</p>
 			<div class="feature-card__grid">
-				<FeatureCard
-					href="/GGbengSite/landing-pages/landing-1"
-					imgSrc="/GGbengSite/assets/images/home/screenshots/landing-1.png"
-					title="Landing Page 1"
-				/>
-				<FeatureCard
-					href="/GGbengSite/landing-pages/landing-2"
-					imgSrc="/GGbengSite/assets/images/home/screenshots/landing-2.png"
-					title="Landing Page 2"
-				/>
+				<BlogPostsList {posts} />
 			</div>
 		</section>
 	</Container>
-<!-- 
-	<Container>
-		<section class="feature-card__section">
-			<h2>Company Pages</h2>
-			<p>
-				Use one of our prebuilt company pages for your about page, contact page,
-				legal pages, blog posts, etc.
-			</p>
-			<div class="feature-card__grid">
-				<FeatureCard
-					href="/company/about"
-					imgSrc="/assets/images/home/screenshots/about.png"
-					title="About Page"
-				/>
-				<FeatureCard
-					href="/company/contact"
-					imgSrc="/assets/images/home/screenshots/contact.png"
-					title="Contact Page"
-				/>
-				<FeatureCard
-					href="/blog/"
-					imgSrc="/assets/images/home/screenshots/blog.png"
-					title="Blog Page"
-				/>
-				<FeatureCard
-					href="/blog/posts/remote-work-mental-health"
-					imgSrc="/assets/images/home/screenshots/blog-post.png"
-					title="Blog Post"
-				/>
-				<FeatureCard
-					href="/company/legal"
-					imgSrc="/assets/images/home/screenshots/legal.png"
-					title="Legal Page"
-				/>
-			</div>
-		</section>
-	</Container>
-
-	<Container>
-		<section class="feature-card__section">
-			<h2>Theme Pages</h2>
-			<p>Learn more about how to set up and use the Odyssey Theme.</p>
-			<div class="feature-card__grid">
-				<FeatureCard
-					href="/theme/get-started"
-					imgSrc="/assets/images/home/screenshots/get-started.png"
-					title="Get Started"
-				/>
-				<FeatureCard
-					href="/theme/style-guide"
-					imgSrc="/assets/images/home/screenshots/style-guide.png"
-					title="Style Guide"
-				/>
-			</div>
-		</section>
-	</Container> -->
 </Layout>
 
 <style>

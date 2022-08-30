@@ -21,7 +21,7 @@ const { seo } = Astro.props as Props;
 		<span slot="logo">
 			<Logo />
 		</span>
-		<Button slot="action-item" href="/blog">To Blog</Button>
+		<Button slot="action-item" href="/GGbengSite/blog">To Blog</Button>
 	</Header>
 	<div id="page">
 		<slot />
@@ -45,7 +45,10 @@ const { seo } = Astro.props as Props;
 		display: none !important;
 		opacity: 0 !important;
 	}
+  .feature-card__grid .blog-posts-list__list {
+    display: unset;
+  }
   #footer footer {
-    min-height: 30vh
+    min-height: 25vh;
   }
 </style>

@@ -33,14 +33,14 @@ import '@docsearch/css/dist/style.css';
     }
     navHeader.toggleAttribute('mobile-menu-open');
   }
-</script>  
+</script>
 
 <header id="odysseyNavHeader" class={`${rightMenu ? "header--right" : ``.trim()}`}>
   <div class="header-logo-menu__container">
   <button id="menuButton">
     <span id="menuButtonIcon" class="material-icons">menu</span>
   </button>
-  <a class="header-logo__link" href="/">
+  <a class="header-logo__link" href="/GGbengSite/">
     <slot name="logo">
     </slot>
   </a>
@@ -52,7 +52,7 @@ import '@docsearch/css/dist/style.css';
           stroke-linejoin="round" transform="translate(-1)" />
       </svg>
     </div>
-    <DocSearch {...{ lang:'zh', labels: { placeholder:'请输入' } }} client:only="preact" />
+    <DocSearch {...{ lang:'zh', labels: { placeholder:'请输入搜索内容' } }} client:only="preact" />
     <slot name="nav">
       {navData && <nav>
         <ul>
@@ -77,7 +77,7 @@ import '@docsearch/css/dist/style.css';
     justify-content: space-between;
     align-items: center;
   }
-  header .header-nav__container {
+   .header-nav__container {
     display: flex;
     align-items: center;
   }
