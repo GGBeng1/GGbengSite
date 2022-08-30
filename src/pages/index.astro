@@ -30,9 +30,9 @@ const posts = await Astro.glob('../pages/blog/posts/*.mdx').then(posts =>
 		<section class="feature-card__section">
 			<h2>最近更新的 blog</h2>
 			<p>下面是最近更新的博客</p>
-			<div class="feature-card__grid">
-				<BlogPostsList {posts} />
-			</div>
+			<!-- <div class="feature-card__grid"> -->
+			<BlogPostsList {posts} />
+			<!-- </div> -->
 		</section>
 	</Container>
 </Layout>

@@ -45,10 +45,12 @@ const { seo } = Astro.props as Props;
 		display: none !important;
 		opacity: 0 !important;
 	}
-  .feature-card__grid .blog-posts-list__list {
-    display: unset;
-  }
-  #footer footer {
-    min-height: 25vh;
-  }
+	.blog-posts-list__list img {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+	}
+	#footer footer {
+		min-height: 25vh;
+	}
 </style>
