@@ -4,33 +4,29 @@ import settings from '../../../config/settings.js';
 ---
 
 <script>
-  import '../../theme-switcher/theme-switcher.ts';
+	import '../../theme-switcher/theme-switcher.ts';
 </script>
 
 <Container>
 	<section class="hero-section__section">
 		<div class="hero-section__text">
-				<h1>Welcome to GGbeng Space</h1>
-				<p>
-					这里是GGbeng的网站
-				</p>
-        <p>用来记载一些 工作博客 和 生活琐事</p>
-				<div class="hero-btns__container">
-					<Button href="/blog" materialIcon="chevron_right"
-						>Get Started</Button
-					>
-					<!-- <Button unelevated>Home Guide</Button> -->
-				</div>
-        {settings.enableThemeSwitcher && <theme-switcher></theme-switcher>}
+			<h1>Welcome to GGbeng Space</h1>
+			<p>这里是GGbeng的网站</p>
+			<p>用来记载一些 工作博客 和 生活琐事</p>
+			<div class="hero-btns__container">
+				<Button href="/blog" materialIcon="chevron_right">Get Started</Button>
+				<!-- <Button unelevated>Home Guide</Button> -->
+			</div>
+			{settings.enableThemeSwitcher && <theme-switcher />}
 		</div>
 		<div class="hero-section__image">
-				<picture>
-					<img
-						src="/assets/images/home/classic-hero.jpg"
-						alt="Astro Odyssey"
-						id="home-hero-image"
-					/>
-				</picture>
+			<picture>
+				<img
+					src="/assets/images/home/classic-hero.jpg"
+					alt="Astro Odyssey"
+					id="home-hero-image"
+				/>
+			</picture>
 		</div>
 	</section>
 </Container>

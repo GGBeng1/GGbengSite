@@ -15,18 +15,18 @@
 import { ref } from 'vue';
 const email = ref('');
 
-	// let reg =
-	// 	/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
-	// if (reg.test(email.value)) {
-	// console.log(mailchimp, 111);
-	// mailchimp.lists
-	// 	.addListMember('64683b0612', {
-	// 		email_address: email.value,
-	// 		status: 'subscribed',
-	// 	})
-	// 	.then(res => {
-	// 		console.log(res, 555);
-	// 	});
+// let reg =
+// 	/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
+// if (reg.test(email.value)) {
+// console.log(mailchimp, 111);
+// mailchimp.lists
+// 	.addListMember('64683b0612', {
+// 		email_address: email.value,
+// 		status: 'subscribed',
+// 	})
+// 	.then(res => {
+// 		console.log(res, 555);
+// 	});
 // };
 // defineExpose({ handlerSubmit });
 </script>

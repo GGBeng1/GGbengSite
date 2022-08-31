@@ -7,7 +7,9 @@ featuredImage: '/assets/images/blog/vite.png'
 excerpt: ''
 tags: ['vite']
 ---
+
 ## 完整的配置加上注释
+
 - 大家可以根据注释来选择需要的插件
 
 ```javascript
@@ -125,7 +127,7 @@ const getPort = () => {
 			if (err) {
 				reject(err);
 			} else {
-        // webpack proxy和vite的抹平
+				// webpack proxy和vite的抹平
 				config.server.port = port;
 				let proxy = { ...dev.proxyTable };
 				let targetProxy = {};

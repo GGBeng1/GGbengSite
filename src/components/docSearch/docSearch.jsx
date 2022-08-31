@@ -9,7 +9,9 @@ import { useCallback, useEffect, useRef, useState } from 'preact/hooks';
 
 export default function Search({ lang = 'en', labels }) {
 	const [isOpen, setIsOpen] = useState(false);
-	const searchButtonRef = useRef(document.getElementById('docsearch-search-button'));
+	const searchButtonRef = useRef(
+		document.getElementById('docsearch-search-button')
+	);
 	const [initialQuery, setInitialQuery] = useState();
 
 	const onOpen = useCallback(() => {
@@ -21,7 +23,7 @@ export default function Search({ lang = 'en', labels }) {
 	}, [setIsOpen]);
 
 	const onInput = useCallback(
-		(e) => {
+		e => {
 			setIsOpen(true);
 			setInitialQuery(e.key);
 		},
@@ -51,8 +53,8 @@ export default function Search({ lang = 'en', labels }) {
 			indexName="blogData"
 			appId="TH02SRKVF6"
 			apiKey="68cb50b7725a5a8b3ff7d219c097d4ee"
-			transformItems={(items) => {
-				return items.map((item) => {
+			transformItems={items => {
+				return items.map(item => {
 					// We transform the absolute URL into a relative URL to
 					// work better on localhost, preview URLS.
 					const a = document.createElement('a');

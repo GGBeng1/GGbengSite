@@ -9,21 +9,22 @@ const seo = {
 };
 ---
 
-<Layout seo={seo}>
+<Layout {seo}>
 	<Container>
 		<section class="contact-hero__section">
 			<div class="contact-hero__text-section">
 				<h1>Contact GGbeng</h1>
 				<p>
-					在这里, 你可以使用github登录<br/>
-					对我进行留言, 也可以在这里对博客内容进行讨论<br/>
-          当然你也可以给我发送邮件 <br/>
-					欢迎👏🏻所有人的畅所欲言! <br/>
+					在这里, 你可以使用github登录<br />
+					对我进行留言, 也可以在这里对博客内容进行讨论<br />
+					当然你也可以给我发送邮件 <br />
+					欢迎👏🏻所有人的畅所欲言! <br />
 				</p>
 				<div>
 					<p>
 						• <em
-							><a href="mailto:cao15340019117@gmail.com">cao15340019117@gmail.com</a
+							><a href="mailto:cao15340019117@gmail.com"
+								>cao15340019117@gmail.com</a
 							></em
 						>
 					</p>
@@ -41,8 +42,8 @@ const seo = {
 		margin: var(--section-margin) auto;
 		display: grid;
 		/* grid-template-columns: 1fr 1fr; */
-    width: 50%;
-    justify-content: center;
+		width: 50%;
+		justify-content: center;
 		min-height: calc(90vh - var(--navbar-height));
 		gap: 3rem;
 	}
@@ -62,7 +63,7 @@ const seo = {
 	@media (max-width: 768px) {
 		.contact-hero__section {
 			grid-template-columns: 1fr;
-      width: auto;
+			width: auto;
 		}
 	}
 </style>
