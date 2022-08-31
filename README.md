@@ -1,12 +1,14 @@
 ## GGbengSite
 
-- 个人网站及博客等展示
-
+- 采用 ```Astro``` 开发的个人网站
+- 使用 ```algolia``` 进行搜索 🔍
+- 采用 ```giscus``` 进行留言,讨论 🌈
+- 本项目托管在 ```netlify``` 上, 依托 ```crawler``` 进行爬虫抓取文档存储 ``algolia`` 所需的搜索 ```schema```
 ### Local Development
 
 ```bash
 
-npm install
+pnpm run install
 
-npm start
+pnpm run start
 ```
