@@ -28,5 +28,8 @@
 		"prettier": "^2.7.1",
 		"prettier-plugin-astro": "^0.5.3",
 		"vue": "^3.2.37"
+	},
+	"dependencies": {
+		"sib-api-v3-sdk": "^8.4.2"
 	}
 }

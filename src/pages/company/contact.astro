@@ -1,6 +1,7 @@
 ---
 import ContactForm from '../../components/forms/ContactForm.astro';
 import Layout from '../../layouts/Page.astro';
+import MailForm from '../../components/forms/mailForm.vue';
 import { Container } from '@odyssey-theme/components';
 
 const seo = {
@@ -25,10 +26,12 @@ const seo = {
 						• <em
 							><a href="mailto:cao15340019117@gmail.com"
 								>cao15340019117@gmail.com</a
-							></em
-						>
+							>
+						</em>
 					</p>
 				</div>
+        <p>你可以订阅我的博客, 更新时会给你发送邮件</p>
+				<MailForm client:only="vue"/>
 			</div>
 			<div class="col-2__container">
 				<ContactForm />

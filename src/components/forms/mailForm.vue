@@ -3,7 +3,7 @@
 		<div class="form-field__container">
 			<input type="text" placeholder="hello@example.com" v-model="email" />
 		</div>
-		<button class="btn" rel="noopener noreferrer">
+		<button class="btn" rel="noopener noreferrer" @click="handler">
 			Submit
 			<span class="material-icons">chevron_right</span>
 		</button>
@@ -11,24 +11,39 @@
 </template>
 
 <script setup>
-// import mailchimp from '@mailchimp/mailchimp_marketing';
 import { ref } from 'vue';
+import SibApiV3Sdk from 'sib-api-v3-sdk';
 const email = ref('');
 
-// let reg =
-// 	/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
-// if (reg.test(email.value)) {
-// console.log(mailchimp, 111);
-// mailchimp.lists
-// 	.addListMember('64683b0612', {
-// 		email_address: email.value,
-// 		status: 'subscribed',
-// 	})
-// 	.then(res => {
-// 		console.log(res, 555);
-// 	});
-// };
-// defineExpose({ handlerSubmit });
+const handler = () => {
+	let reg = /^\w+@([\da-z\.-]+)\.([a-z]+|[\u2E80-\u9FFF]+)$/;
+	if (!reg.test(email.value)) {
+		alert('请输入合法邮箱📮');
+		return;
+	}
+	let defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+	let apiKey = defaultClient.authentications['api-key'];
+	apiKey.apiKey = process.env.S_API_KEY;
+	let apiInstance = new SibApiV3Sdk.ContactsApi();
+
+	let createContact = new SibApiV3Sdk.CreateContact();
+	createContact = {
+		email: email.value,
+		listIds: [4],
+		emailBlacklisted: false,
+		smsBlacklisted: false,
+		updateEnabled: false,
+	};
+	apiInstance.createContact(createContact).then(
+		function () {
+			alert('订阅成功🎉 , 请勿重复订阅');
+		},
+		function () {
+			alert('每个邮箱📮只能订阅一次📌');
+		}
+	);
+};
 </script>
 
 <style>
@@ -48,13 +63,13 @@ const email = ref('');
 .form-field__container input[type='tel'] {
 	width: 100%;
 	padding: 0.5rem;
-	border: 2px solid var(--form-field-border-color, #ccc);
-	color: var(--form-field-input-color, #000000);
-	border-radius: var(--form-field-border-radius, 0.25rem);
+	border: 2px solid let(--form-field-border-color, #ccc);
+	color: let(--form-field-input-color, #000000);
+	border-radius: let(--form-field-border-radius, 0.25rem);
 	outline-style: none;
 }
 .form-field__container input:focus {
-	border: 2px solid var(--form-field-border-focus-color, #000);
+	border: 2px solid let(--form-field-border-focus-color, #000);
 }
 .btn {
 	width: fit-content;
@@ -63,32 +78,32 @@ const email = ref('');
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: var(--theme-primary);
-	color: var(--theme-on-primary);
+	background-color: let(--theme-primary);
+	color: let(--theme-on-primary);
 	border: none;
-	border-radius: var(--theme-button-border-radius);
+	border-radius: let(--theme-button-border-radius);
 	font-weight: 500;
 }
 .btn:hover {
-	background-color: var(--theme-primary-hover);
+	background-color: let(--theme-primary-hover);
 }
 .btn--unelevated {
 	background-color: transparent;
-	color: var(--theme-on-bg);
+	color: let(--theme-on-bg);
 }
 .btn--unelevated:hover {
 	background-color: transparent;
-	opacity: var(--theme-primary-hover);
+	opacity: let(--theme-primary-hover);
 }
 .btn--outlined {
-	color: var(--theme-primary);
+	color: let(--theme-primary);
 	background-color: transparent;
-	border: 2px solid var(--theme-primary);
-	transition: background-color var(--theme-transition);
+	border: 2px solid let(--theme-primary);
+	transition: background-color let(--theme-transition);
 }
 .btn--outlined:hover {
-	background-color: var(--theme-primary);
-	color: var(--theme-on-primary);
+	background-color: let(--theme-primary);
+	color: let(--theme-on-primary);
 }
 .material-icons {
 	margin-left: 0.25rem;
