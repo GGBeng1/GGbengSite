@@ -24,7 +24,7 @@ const handler = () => {
 	let defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 	let apiKey = defaultClient.authentications['api-key'];
-	apiKey.apiKey = process.env.S_API_KEY;
+	apiKey.apiKey = import.meta.env.S_API_KEY;
 	let apiInstance = new SibApiV3Sdk.ContactsApi();
 
 	let createContact = new SibApiV3Sdk.CreateContact();
