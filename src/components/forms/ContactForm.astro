@@ -1,26 +1,40 @@
 ---
-import { Button, FormInput, FormSelect, FormTextarea } from '@odyssey-theme/components';
-
-const selectOptions = [
-  "Google Search",
-  "Social Media",
-  "Email",
-]
+// import { Button, FormInput, FormSelect, FormTextarea } from '@odyssey-theme/components';
+// const selectOptions = [
+//   "Google Search",
+//   "Social Media",
+//   "Email",
+// ]
 
 ---
 
-<form name="Contact Form" method="POST" action="/contact-thank-you" data-netlify="true">
+<!-- <form name="Contact Form" method="POST" action="/contact-thank-you" data-netlify="true">
   <FormInput type="text" label="Name" name="Name" placeholder="John Doe" />
   <FormInput type="email" label="Email" name="Email" placeholder="hello@example.com" />
   <FormSelect label="How Did You Hear About Us?" options={selectOptions} />
   <FormTextarea label="Message" name="Message" placeholder="Your message here..." />
   <Button>Submit</Button>
-</form>
+</form> -->
+<giscus-widget
+  id="comments"
+  repo="GGBeng1/GGbengSite"
+  repoid="R_kgDOH5j3qg"
+  category="Announcements"
+  categoryid="DIC_kwDOH5j3qs4CRHAo"
+  mapping="specific"
+  term="Welcome to giscus!"
+  reactionsenabled="1"
+  emitmetadata="0"
+  inputposition="top"
+  theme="light"
+  lang="zh-CN"
+  loading="lazy"
+></giscus-widget>
 
 <style>
-  form {
+  /* form {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-  }
+  } */
 </style>

@@ -158,7 +158,13 @@ import '@docsearch/css/dist/style.css';
     }
      header[mobile-menu-open] nav ul li {
        font-size: var(--font-size-lg);
-       margin-bottom: 1rem;
+       /* margin-bottom: 1rem; */
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+     }
+     header[mobile-menu-open] nav ul li:first-child {
+      margin-top: 0.5rem;
      }
   }
 </style>
