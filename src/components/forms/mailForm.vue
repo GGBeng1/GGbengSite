@@ -14,7 +14,6 @@
 import { ref } from 'vue';
 import SibApiV3Sdk from 'sib-api-v3-sdk';
 const email = ref('');
-
 const handler = () => {
 	let reg = /^\w+@([\da-z\.-]+)\.([a-z]+|[\u2E80-\u9FFF]+)$/;
 	if (!reg.test(email.value)) {
@@ -24,7 +23,7 @@ const handler = () => {
 	let defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 	let apiKey = defaultClient.authentications['api-key'];
-	apiKey.apiKey = import.meta.env.S_API_KEY;
+	apiKey.apiKey = import.meta.env.PUBLIC_S_API_KEY;
 	let apiInstance = new SibApiV3Sdk.ContactsApi();
 
 	let createContact = new SibApiV3Sdk.CreateContact();
