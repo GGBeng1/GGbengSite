@@ -16,7 +16,7 @@ const handler = async event => {
 			limit: 50,
 			offset: 0,
 		};
-		let res1 = apiInstance1.getContactsFromList(listId, opts);
+		let res1 = await apiInstance1.getContactsFromList(listId, opts);
 		if (res1) {
 			return {
 				statusCode: 200,
