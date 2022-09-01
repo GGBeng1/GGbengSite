@@ -45,10 +45,10 @@ export const footerLists = [
 				title: 'Blog',
 				slug: '/blog',
 			},
-			// {
-			// 	title: 'Contact',
-			// 	slug: '/company/contact',
-			// },
+			{
+				title: 'Contact',
+				slug: '/company/contact',
+			},
 		],
 	},
 	// {

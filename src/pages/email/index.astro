@@ -1,0 +1,67 @@
+---
+// import ContactForm from '../../components/forms/ContactForm.astro';
+import Layout from '../../layouts/Page.astro';
+import { Container } from '@odyssey-theme/components';
+import SubmitEmailAll from '../../components/forms/submitEmailAll.vue';
+
+const seo = {
+	title: 'Contact | Astro Odyssey Theme',
+	description: 'Contact Page',
+};
+---
+
+<Layout {seo}>
+	<Container>
+		<section class="contact-hero__section">
+			<div class="contact-hero__text-section">
+				<h1>Contact GGbeng</h1>
+				<p>这是一个管理页面</p>
+				<div>
+					<p>
+						Email • <em
+							><a href="mailto:cao15340019117@gmail.com"
+								>cao15340019117@gmail.com</a
+							>
+						</em>
+					</p>
+				</div>
+				<p>只有输入正确的指令才能执行✅</p>
+			</div>
+			<div class="col-2__container">
+				<!-- <ContactForm /> -->
+				<SubmitEmailAll client:only="vue" />
+			</div>
+		</section>
+	</Container>
+</Layout>
+
+<style>
+	.contact-hero__section {
+		margin: var(--section-margin) auto;
+		display: grid;
+		/* grid-template-columns: 1fr 1fr; */
+		width: 50%;
+		justify-content: center;
+		min-height: calc(90vh - var(--navbar-height));
+		gap: 3rem;
+	}
+	.contact-hero__text-section {
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+	}
+	.col-2__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	@media (max-width: 768px) {
+		.contact-hero__section {
+			grid-template-columns: 1fr;
+			width: auto;
+		}
+	}
+</style>
