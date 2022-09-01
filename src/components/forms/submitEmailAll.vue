@@ -15,7 +15,7 @@ import { ref } from 'vue';
 const email = ref('');
 const handler = async () => {
 	let reg = import.meta.env.PUBLIC_S_PASSWORD;
-	if (reg !== email) {
+	if (reg !== email.value) {
 		alert('请输入合法密码');
 		return;
 	}
