@@ -20,4 +20,15 @@ export default defineConfig({
 			compat: true,
 		}),
 	], // Add renderers to the config
+	vite: {
+		server: {
+			proxy: {
+				'/api': {
+					target: 'http://localhost:8888',
+					changeOrigin: true,
+					rewrite: path => path.replace(/^\/api/, ''),
+				},
+			},
+		},
+	},
 });
