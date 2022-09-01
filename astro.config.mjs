@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import vue from '@astrojs/vue';
-import preact from '@astrojs/preact';
 import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
@@ -16,9 +15,6 @@ export default defineConfig({
 		sitemap(),
 		mdx(),
 		vue(),
-		preact({
-			compat: true,
-		}),
 	], // Add renderers to the config
 	vite: {
 		server: {

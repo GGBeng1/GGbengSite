@@ -1,10 +1,10 @@
 <template>
 	<div class="newsletter-form__container">
 		<div class="form-field__container">
-			<input type="text" placeholder="hello@example.com" v-model="email" />
+			<input type="text" placeholder="你的邮箱: hello@example.com" v-model="email" />
 		</div>
 		<button class="btn" rel="noopener noreferrer" @click="handler">
-			Submit
+			订阅
 			<span class="material-icons">chevron_right</span>
 		</button>
 	</div>
