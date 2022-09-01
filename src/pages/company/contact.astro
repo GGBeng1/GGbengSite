@@ -1,5 +1,5 @@
 ---
-import ContactForm from '../../components/forms/ContactForm.astro';
+// import ContactForm from '../../components/forms/ContactForm.astro';
 import Layout from '../../layouts/Page.astro';
 import MailForm from '../../components/forms/mailForm.vue';
 import { Container } from '@odyssey-theme/components';
@@ -16,25 +16,24 @@ const seo = {
 			<div class="contact-hero__text-section">
 				<h1>Contact GGbeng</h1>
 				<p>
-					在这里, 你可以使用github登录<br />
-					对我进行留言, 也可以在这里对博客内容进行讨论<br />
+					每个博客下都可以进行讨论 <br />
 					当然你也可以给我发送邮件 <br />
-					欢迎👏🏻所有人的畅所欲言! <br />
+					欢迎 👏🏻 所有人的畅所欲言! <br />
 				</p>
 				<div>
 					<p>
-						• <em
+						Email • <em
 							><a href="mailto:cao15340019117@gmail.com"
 								>cao15340019117@gmail.com</a
 							>
 						</em>
 					</p>
 				</div>
-        <p>你可以订阅我的博客, 更新时会给你发送邮件</p>
-				<MailForm client:only="vue"/>
+				<p>你可以订阅我的博客, 更新时会给你发送邮件</p>
 			</div>
 			<div class="col-2__container">
-				<ContactForm />
+				<!-- <ContactForm /> -->
+				<MailForm client:only="vue" />
 			</div>
 		</section>
 	</Container>
