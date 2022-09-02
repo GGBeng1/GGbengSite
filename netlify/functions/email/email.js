@@ -1,6 +1,17 @@
 // Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
 const SibApiV3Sdk = require('sib-api-v3-sdk');
+const JSEncrypt = require('node-jsencrypt-fix');
+
 const handler = async event => {
+	let query = event.headers.encrypted;
+	let decrypt = new JSEncrypt();
+	decrypt.setPrivateKey(process.env.PUBLIC_S_PRIKEY);
+	let uncrypted = decrypt.decrypt(query);
+	if (uncrypted !== process.env.PUBLIC_S_PASSWORD) {
+		return {
+			statusCode: 500,
+		};
+	}
 	let defaultClient = SibApiV3Sdk.ApiClient.instance;
 	let apiKey = defaultClient.authentications['api-key'];
 	apiKey.apiKey = process.env.PUBLIC_S_API_KEY;

@@ -12,15 +12,24 @@
 
 <script setup>
 import { ref } from 'vue';
+import JSEncrypt from 'jsencrypt';
 const email = ref('');
+const pubKey = import.meta.env.PUBLIC_S_PUBKEY;
 const handler = async () => {
 	let reg = import.meta.env.PUBLIC_S_PASSWORD;
 	if (reg !== email.value) {
 		alert('请输入合法密码');
 		return;
 	}
+	let encrypt = new JSEncrypt();
+	encrypt.setPublicKey(pubKey);
+	let encrypted = encrypt.encrypt(email.value);
 	let pre = import.meta.env.PROD ? '/' : '/api';
-	let res = await fetch(pre + '.netlify/functions/email');
+	let res = await fetch(pre + '.netlify/functions/email', {
+		headers: {
+			encrypted: encrypted,
+		},
+	});
 	if (res.status == 200) {
 		const json = await res.json();
 		if (json.code == 200) {
@@ -29,10 +38,6 @@ const handler = async () => {
 			alert('发送邮件失败');
 		}
 	}
-	// const json = res.json();
-	// console.log(json);
-	// const data = json.data
-	// console.log(data);
 };
 </script>
 
