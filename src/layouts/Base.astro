@@ -16,9 +16,9 @@ const { seo } = Astro.props;
 	</head>
 	<body>
 		<SkipLink />
-    <slot name="announcement-bar" />
-		<slot name="header" />
+		<slot name="announcement-bar" />
 		<main id="content">
+			<slot name="header" />
 			<slot />
 		</main>
 		<slot name="footer" />
