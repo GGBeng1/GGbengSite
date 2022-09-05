@@ -71,4 +71,14 @@ const { seo } = Astro.props as Props;
 		width: 100%;
 		overflow: auto;
 	}
+	html::-webkit-scrollbar {
+		width: 8px;
+	}
+	html::-webkit-scrollbar-thumb {
+		background: var(--theme-primary);
+		border-radius: 4px;
+	}
+	html::-webkit-scrollbar-track {
+		background: var(--theme-on-primary);
+	}
 </style>
