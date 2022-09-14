@@ -14,19 +14,19 @@
 		"format": "npx prettier -w ."
 	},
 	"devDependencies": {
-		"@astrojs/mdx": "^0.10.3",
+		"@astrojs/mdx": "^0.11.1",
 		"@astrojs/sitemap": "^1.0.0",
-		"@astrojs/vue": "^1.0.0",
-		"@odyssey-theme/components": "^0.1.66",
-		"astro": "^1.1.2",
-		"date-fns": "^2.28.0",
+		"@astrojs/vue": "^1.0.2",
+		"@odyssey-theme/components": "^0.1.67",
+		"astro": "^1.2.3",
+		"date-fns": "^2.29.3",
 		"jsencrypt": "^3.2.1",
-		"lit": "^2.2.8",
+		"lit": "^2.3.1",
 		"node-jsencrypt-fix": "^1.0.0",
 		"nodejs-jsencrypt": "3.0.0-rc.1",
 		"prettier": "^2.7.1",
-		"prettier-plugin-astro": "^0.5.3",
+		"prettier-plugin-astro": "^0.5.4",
 		"sib-api-v3-sdk": "^8.4.2",
-		"vue": "^3.2.37"
+		"vue": "^3.2.39"
 	}
 }
