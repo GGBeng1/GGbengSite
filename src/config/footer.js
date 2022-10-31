@@ -1,10 +1,3 @@
-import {
-	twitterIcon,
-	youtubeIcon,
-	githubIcon,
-	instagramIcon,
-} from '../icons/icons';
-
 export const footerSocials = [
 	// {
 	//   url: 'https://instagram.com/',
@@ -16,11 +9,11 @@ export const footerSocials = [
 	// },
 	{
 		url: 'https://twitter.com/GGbeng1',
-		icon: twitterIcon,
+		icon: 'mdi:twitter',
 	},
 	{
 		url: 'https://github.com/GGBeng1',
-		icon: githubIcon,
+		icon: 'mdi:github',
 	},
 ];
 

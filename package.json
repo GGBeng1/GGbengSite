@@ -10,20 +10,26 @@
 		"format": "npx prettier -w ."
 	},
 	"devDependencies": {
+		"@astrojs/image": "^0.11.0",
+		"@astrojs/lit": "^1.0.1",
 		"@astrojs/mdx": "^0.11.5",
 		"@astrojs/rss": "^1.0.3",
 		"@astrojs/sitemap": "^1.0.0",
 		"@astrojs/vue": "^1.2.1",
-		"@odyssey-theme/components": "^0.1.67",
+		"@littlesticks/odyssey-theme-components": "^0.0.23",
 		"astro": "^1.6.1",
+		"astro-icon": "0.8.0",
 		"date-fns": "^2.29.3",
 		"jsencrypt": "^3.3.0",
-		"lit": "^2.3.1",
+		"lit": "^2.4.0",
 		"node-jsencrypt-fix": "^1.0.0",
 		"nodejs-jsencrypt": "3.0.0-rc.1",
 		"prettier": "^2.7.1",
 		"prettier-plugin-astro": "^0.7.0",
 		"sib-api-v3-sdk": "^8.4.2",
 		"vue": "^3.2.41"
+	},
+	"dependencies": {
+		"@webcomponents/template-shadowroot": "^0.1.0"
 	}
 }
