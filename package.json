@@ -14,20 +14,20 @@
 		"format": "npx prettier -w ."
 	},
 	"devDependencies": {
-		"@astrojs/mdx": "^0.11.1",
-		"@astrojs/rss": "^1.0.1",
+		"@astrojs/mdx": "^0.11.5",
+		"@astrojs/rss": "^1.0.3",
 		"@astrojs/sitemap": "^1.0.0",
-		"@astrojs/vue": "^1.0.2",
+		"@astrojs/vue": "^1.2.1",
 		"@odyssey-theme/components": "^0.1.67",
-		"astro": "^1.2.7",
+		"astro": "^1.6.1",
 		"date-fns": "^2.29.3",
-		"jsencrypt": "^3.2.1",
+		"jsencrypt": "^3.3.0",
 		"lit": "^2.3.1",
 		"node-jsencrypt-fix": "^1.0.0",
 		"nodejs-jsencrypt": "3.0.0-rc.1",
 		"prettier": "^2.7.1",
-		"prettier-plugin-astro": "^0.5.4",
+		"prettier-plugin-astro": "^0.7.0",
 		"sib-api-v3-sdk": "^8.4.2",
-		"vue": "^3.2.39"
+		"vue": "^3.2.41"
 	}
 }
