@@ -22,7 +22,6 @@ export default defineConfig({
 			gfm: true,
 		}),
 		lit(),
-		vue(),
 		image(),
 		NetlifyCMS({
 			config: {
@@ -80,6 +79,7 @@ export default defineConfig({
 				],
 			},
 		}),
+		vue(),
 	], // Add renderers to the config
 	vite: {
 		server: {
