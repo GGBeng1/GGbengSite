@@ -64,6 +64,7 @@ export default defineConfig({
 								widget: 'image',
 								required: false,
 							},
+              { label: 'Tags', name: 'tags', widget: 'list' },
 							{ name: 'body', widget: 'markdown', label: 'Post Body' },
 							{
 								label: 'Layout',
