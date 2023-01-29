@@ -30,6 +30,7 @@
 		"vue": "^3.2.45"
 	},
 	"dependencies": {
-		"@webcomponents/template-shadowroot": "^0.1.0"
+		"@webcomponents/template-shadowroot": "^0.1.0",
+		"astro-netlify-cms": "^0.5.2"
 	}
 }

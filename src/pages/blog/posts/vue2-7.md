@@ -4,7 +4,6 @@ title: VUE v2.7.0 "Naruto" 版本发布！
 description: vue2.7的到来, 可以在vue2中使用vue3的语法!
 publishDate: 2022/07/01
 featuredImage: '/assets/images/blog/vue.png'
-excerpt: ''
 tags: ['Vue']
 ---
 
@@ -56,18 +55,3 @@ reactive(foo) === foo
 ## 结尾
 
 [完整详情地址](https://github.com/vuejs/vue/blob/main/CHANGELOG.md#270-2022-07-01)
-
-<giscus-widget
-	id="comments"
-	repo="GGBeng1/GGbengSite"
-	repoid="R_kgDOH5j3qg"
-	category="Announcements"
-	categoryid="DIC_kwDOH5j3qs4CRHAo"
-	mapping="pathname"
-	term="Welcome to GGBeng Space!"
-	reactionsenabled="1"
-	emitmetadata="0"
-	inputposition="top"
-	theme="light"
-	lang="zh-CN"
-	loading="lazy"></giscus-widget>

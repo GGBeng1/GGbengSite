@@ -4,7 +4,7 @@ import Layout from '../layouts/Page.astro';
 import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
 import { parse, isBefore } from 'date-fns';
 
-const posts = await Astro.glob('../pages/blog/posts/*.mdx').then(posts =>
+const posts = await Astro.glob('../pages/blog/posts/*.md').then(posts =>
 	posts
 		.map(({ frontmatter, url }) => ({
 			title: frontmatter.title,
