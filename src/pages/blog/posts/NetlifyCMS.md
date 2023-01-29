@@ -12,6 +12,7 @@ tags: ['Astro', 'NetlifyCMS']
 ### 问题
 1.Rss报错
  - 原因是```@astrojs/rss@2.1.0```版本为了配合内容管理功能, 在读取流文件的时候采用了新方法, 但是需要配合 ```getCollection```, 如果你和我一样是静态网站, 最好使用```@astrojs/rss@2.0.0```版本
+
 2.安装astro-netlify-cms后Vue组件报错
  - 原因令人难过, 排查了15分钟原来是插件加载顺序问题, 需要把Vue的插件放到最后面
 
