@@ -7,13 +7,23 @@ import image from '@astrojs/image';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://www.ggbeng.tech',
+	site: 'https://www.ggbeng.tech/',
 	// outDir: './docs',
 	// base: '',
 	// Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
 	sitemap: true,
 	// Generate sitemap (set to "false" to disable)
-	integrations: [sitemap(), mdx(), lit(), vue(), image()], // Add renderers to the config
+	integrations: [
+		sitemap(),
+		mdx({
+			extendMarkdownConfig: false,
+			smartypants: true,
+			gfm: true,
+		}),
+		lit(),
+		vue(),
+		image(),
+	], // Add renderers to the config
 	vite: {
 		server: {
 			proxy: {
