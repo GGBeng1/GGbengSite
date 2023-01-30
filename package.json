@@ -13,7 +13,7 @@
 		"@astrojs/image": "^0.13.0",
 		"@astrojs/lit": "^1.1.0",
 		"@astrojs/mdx": "^0.15.1",
-		"@astrojs/rss": "^2.0.0",
+		"@astrojs/rss": "2.0.0",
 		"@astrojs/sitemap": "^1.0.0",
 		"@astrojs/vue": "^2.0.0",
 		"@littlesticks/odyssey-theme-components": "^0.0.23",

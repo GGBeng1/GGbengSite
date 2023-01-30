@@ -1,9 +1,8 @@
 import rss from '@astrojs/rss';
 import { parse } from 'date-fns';
 
-const postImportResult = import.meta.globEager('./blog/posts/*.mdx');
+const postImportResult = import.meta.globEager('./blog/posts/*.md');
 const posts = Object.values(postImportResult);
-
 export const get = () =>
 	rss({
 		title: 'GGbeng’s Blog',
@@ -14,6 +13,6 @@ export const get = () =>
 			title: frontmatter.title,
 			description: frontmatter.description,
 			authors: frontmatter.authors,
-			pubDate: parse(frontmatter.publishDate, 'MMMM d, yyyy', new Date()),
+			pubDate: parse(frontmatter.publishDate, 'yyyy/MM/dd', new Date()),
 		})),
 	});
