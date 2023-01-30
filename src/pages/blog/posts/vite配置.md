@@ -2,7 +2,7 @@
 layout: '../../../layouts/Post.astro'
 title: 开发及生产环境的vite3配置(vue2.7版)
 description: vue2.7和vite3组合, 打造完美的vue项目环境
-publishDate: 2022/08/30
+publishDate: 2022/09/01
 featuredImage: '/assets/images/blog/vite.png'
 tags: ['vite']
 ---
