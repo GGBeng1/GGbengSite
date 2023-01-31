@@ -3,7 +3,7 @@ layout: '../../../layouts/Post.astro'
 title: 给Astro升级到2.0.0，顺便安装使用一下NetlifyCMS
 description: Astro最近升级到了2.0.0版本，同时增加了内容管理的功能，正好Netlify也支持，尝试一下
 publishDate: 2023/01/29
-featuredImage: '/assets/images/blog/NetlifyCMS.jpg'
+featuredImage: '/assets/images/blog/netlifycms.jpg'
 tags: ['Astro', 'NetlifyCMS']
 ---
 
