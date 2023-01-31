@@ -10,7 +10,7 @@ const posts = await Astro.glob('../pages/blog/posts/*.md').then(posts =>
 			title: frontmatter.title,
 			description: frontmatter.description,
 			authors: frontmatter.authors,
-			publishDate: parse(frontmatter.publishDate, 'MMMM d, yyyy', new Date()),
+			publishDate: parse(frontmatter.publishDate, 'yyyy/MM/dd', new Date()),
 			featuredImage: frontmatter.featuredImage,
 			excerpt: frontmatter.excerpt,
 			href: url,
