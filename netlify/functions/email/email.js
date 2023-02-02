@@ -44,7 +44,7 @@ const handler = async event => {
 			subject: '欢迎关注我的博客~', // 标题
 			text: '欢迎关注, 我会在有新文章的时候给你发送邮件 📮', // 标题
 		};
-		transport.sendMail(mailOptions, function (error, res) {
+		await transport.sendMail(mailOptions, function (error, res) {
 			if (error) {
 				console.log('邮件发送失败: ' + error);
 			}
