@@ -32,36 +32,23 @@
 
 <script setup>
 import { ref } from 'vue';
-import SibApiV3Sdk from 'sib-api-v3-sdk';
 const email = ref('');
-const handler = () => {
+const handler = async () => {
 	let reg = /^\w+@([\da-z\.-]+)\.([a-z]+|[\u2E80-\u9FFF]+)$/;
 	if (!reg.test(email.value)) {
 		alert('请输入合法邮箱📮');
 		return;
 	}
-	let defaultClient = SibApiV3Sdk.ApiClient.instance;
-
-	let apiKey = defaultClient.authentications['api-key'];
-	apiKey.apiKey = import.meta.env.PUBLIC_S_API_KEY;
-	let apiInstance = new SibApiV3Sdk.ContactsApi();
-
-	let createContact = new SibApiV3Sdk.CreateContact();
-	createContact = {
-		email: email.value,
-		listIds: [4],
-		emailBlacklisted: false,
-		smsBlacklisted: false,
-		updateEnabled: false,
-	};
-	apiInstance.createContact(createContact).then(
-		function () {
+	let pre = import.meta.env.PROD ? '/' : '/api';
+	let res = await fetch(pre + '.netlify/functions/email?email=' + email.value);
+	if (res.status == 200) {
+		const json = await res.json();
+		if (json.code == 200) {
 			alert('订阅成功🎉 , 请勿重复订阅');
-		},
-		function () {
+		} else {
 			alert('每个邮箱📮只能订阅一次📌');
 		}
-	);
+	}
 };
 </script>
 

@@ -22,11 +22,12 @@
 		"date-fns": "^2.29.3",
 		"jsencrypt": "^3.3.1",
 		"lit": "^2.6.1",
+		"mysql2": "^3.1.0",
 		"node-jsencrypt-fix": "^1.0.0",
 		"nodejs-jsencrypt": "3.0.0-rc.1",
+		"nodemailer": "^6.9.1",
 		"prettier": "^2.8.3",
 		"prettier-plugin-astro": "^0.8.0",
-		"sib-api-v3-sdk": "^8.5.0",
 		"vue": "^3.2.45"
 	},
 	"dependencies": {
