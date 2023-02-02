@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 const transport = nodemailer.createTransport({
 	host: 'smtp.163.com', // qq邮箱主机
 	secure: true, // 使用 SSL
-	// secureConnection: true, // 使用 SSL
+	secureConnection: true, // 使用 SSL
 	port: 587, // SMTP 端口 或者587
 	auth: {
 		user: 'ggbeng1@163.com', // 账号：域名邮箱账号
