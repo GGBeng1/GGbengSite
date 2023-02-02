@@ -22,7 +22,7 @@ tags: ['gitlab', 'gitlab-runner']
 2.开始仔细查看日志发现, 拉取镜像及数据缓存耗时都是正常的, 也就是构建时间变长了, 这里第一时间我想到是CPU调度及内存占用出现的问题, 于是我把gitlab及runner的核心数加了两个,内存增加了8g, 但是并没有解决😭
 
 3.没办法, 只能查看docker及Linux的日志, 经过perf火焰图发现loop_queue_work函数调用时间过长
-<img src='../../../../public/assets/images/blog/fire.jpg' />
+<img src='/assets/images/blog/fire.jpg' />
 - 经过查阅docker文档, 发现存储驱动优先级的问题(吐血)。。。
 - 原因是因为业务JDK的需求, 我最新升级了一下Linux内核
 
