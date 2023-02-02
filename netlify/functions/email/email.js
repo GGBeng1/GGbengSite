@@ -35,8 +35,8 @@ const handler = async event => {
 			}),
 		};
 	} else {
-		// await connection.execute('INSERT INTO `email` (email) VALUES (?)', [email]);
-		// connection.end();
+		await connection.execute('INSERT INTO `email` (email) VALUES (?)', [email]);
+		connection.end();
 
 		const mailOptions = {
 			from: 'GGbeng<ggbeng1@163.com>', // 发件地址
