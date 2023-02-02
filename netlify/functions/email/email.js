@@ -39,7 +39,7 @@ const handler = async event => {
 		connection.end();
 
 		const mailOptions = {
-			from: 'ggbeng@ggbeng.tech', // 发件地址
+			from: 'GGbeng<ggbeng@ggbeng.tech>', // 发件地址
 			to: email, // 收件列表
 			subject: '欢迎关注我的博客~', // 标题
 			text: '欢迎关注, 我会在有新文章的时候给你发送邮件 📮', // 标题
