@@ -4,9 +4,9 @@ const nodemailer = require('nodemailer');
 // 开启一个 SMTP 连接池
 const transport = nodemailer.createTransport({
 	host: 'smtp.163.com', // qq邮箱主机
-	// secure: true, // 使用 SSL
+	secure: true, // 使用 SSL
 	// secureConnection: true, // 使用 SSL
-	port: 465, // SMTP 端口 或者587
+	port: 587, // SMTP 端口 或者587
 	auth: {
 		user: 'ggbeng1@163.com', // 账号：域名邮箱账号
 		pass: process.env.PUBLIC_S_EMAIL, // 密码：SMPT获取的密码
@@ -35,8 +35,8 @@ const handler = async event => {
 			}),
 		};
 	} else {
-		await connection.execute('INSERT INTO `email` (email) VALUES (?)', [email]);
-		connection.end();
+		// await connection.execute('INSERT INTO `email` (email) VALUES (?)', [email]);
+		// connection.end();
 
 		const mailOptions = {
 			from: 'GGbeng<ggbeng1@163.com>', // 发件地址
