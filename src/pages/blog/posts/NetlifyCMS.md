@@ -84,7 +84,7 @@ NetlifyCMS({
 - 需要开启Identity服务, 以及Git Gateway, 第一次可以选择所有人访问, 注册后改成受邀请访问就可以了
 
 - 下面就是书写博客的图片
-<img src='../../../../public/assets/images/blog/cms.jpg'/>
+<img src='/assets/images/blog/cms.jpg'/>
 
 ### NetlifyCMS的问题
 - 内容书写中文光标错位, 目前我已经提了issue, 但是还没有解决, 有兴趣的可以去看看
