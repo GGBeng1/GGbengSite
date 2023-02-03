@@ -23,7 +23,7 @@ tags: ['Netlify', 'Astro']
 
 - 4.我的博客是支持邮件订阅的, Netlify是免费支持云函数的也就是ServerLess, 所以我就采用了Netlify的云函数来实现邮件订阅的功能(又省了一笔)
 - 5.我将我的博客代码开源在了GitHub, 同时Netlify也支持绑定GitHub仓库, 这样就可以用MarkDown的形式存储我的博客啦
-<img src='../../../../public/assets/images/blog/netlify-ggbeng.jpg' />
+<img src='/assets/images/blog/netlify-ggbeng.jpg' />
 
 ### 结尾
 - 由于过去的博客都是Json形式存储的, 所以大部分博客都没有同步过来, 后续我会写个脚本同步过来
