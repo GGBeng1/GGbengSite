@@ -3,7 +3,7 @@ layout: '../../../layouts/Post.astro'
 title: 订阅博客及更新博客的邮件通知暂停服务(已恢复)
 description: sendinblue帮我账户ban了, 可恶啊！
 publishDate: 2023/02/02
-featuredImage: '/assets/images/blog/sendemail.jpg'
+featuredImage: '/assets/images/blog/emailservice.jpg'
 tags: ['Netlify', 'Email']
 ---
 ## 原因
