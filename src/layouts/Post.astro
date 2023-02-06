@@ -1,6 +1,6 @@
 ---
 import { Container } from '@littlesticks/odyssey-theme-components';
-import Layout from './Page.astro'; 
+import Layout from './Page.astro';
 import { generateTagData } from '../utils/helpers';
 
 const {content: {title, description, publishDate, canonicalURL, featuredImage, tags} } = Astro.props;
@@ -16,8 +16,8 @@ const seo = {
 };
 ---
 
-<Layout seo={seo}> 
-  <div class="post-header__container"> 
+<Layout seo={seo}>
+  <div class="post-header__container">
     <ul class="post-tags__list">
       {allTagsData.map(tag => (
         <li class="post-tags__tag">
@@ -73,7 +73,7 @@ const seo = {
   }
   .post-tags__tag a {
     font-size: var(--font-size-sm);
-    text-decoration: none;
+    /* text-decoration: none; */
   }
   .post-layout__img {
     margin: 0 auto 1rem auto;
