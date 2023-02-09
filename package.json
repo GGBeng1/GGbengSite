@@ -10,28 +10,28 @@
 		"format": "npx prettier -w ."
 	},
 	"devDependencies": {
-		"@astrojs/image": "^0.13.0",
-		"@astrojs/lit": "^1.1.0",
-		"@astrojs/mdx": "^0.15.1",
+		"@astrojs/image": "^0.14.1",
+		"@astrojs/lit": "^1.2.0",
+		"@astrojs/mdx": "^0.16.0",
 		"@astrojs/rss": "2.0.0",
-		"@astrojs/sitemap": "^1.0.0",
-		"@astrojs/vue": "^2.0.0",
+		"@astrojs/sitemap": "^1.0.1",
+		"@astrojs/vue": "^2.0.1",
 		"@littlesticks/odyssey-theme-components": "^0.0.23",
-		"astro": "^2.0.2",
+		"astro": "^2.0.9",
 		"astro-icon": "0.8.0",
 		"date-fns": "^2.29.3",
 		"jsencrypt": "^3.3.1",
 		"lit": "^2.6.1",
-		"mysql2": "^3.1.0",
+		"mysql2": "^3.1.2",
 		"node-jsencrypt-fix": "^1.0.0",
 		"nodejs-jsencrypt": "3.0.0-rc.1",
 		"nodemailer": "^6.9.1",
-		"prettier": "^2.8.3",
+		"prettier": "^2.8.4",
 		"prettier-plugin-astro": "^0.8.0",
-		"vue": "^3.2.45"
+		"vue": "^3.2.47"
 	},
 	"dependencies": {
 		"@webcomponents/template-shadowroot": "^0.1.0",
-		"astro-netlify-cms": "^0.5.2"
+		"astro-netlify-cms": "^0.5.3"
 	}
 }
