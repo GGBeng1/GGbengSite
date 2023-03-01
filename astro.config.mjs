@@ -13,6 +13,7 @@ export default defineConfig({
 	// base: '',
 	// Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
 	sitemap: true,
+	server: { port: 8080 },
 	// Generate sitemap (set to "false" to disable)
 	integrations: [
 		sitemap(),
@@ -44,14 +45,14 @@ export default defineConfig({
 						delete: true,
 						fields: [
 							{ name: 'title', widget: 'string', label: 'Post Title' },
-              {
-                name: 'publishDate',
-                widget: 'datetime',
-                format: 'YYYY/MM/DD',
-                date_format: 'YYYY/MM/DD',
-                time_format: false,
-                label: 'Publish Date',
-              },
+							{
+								name: 'publishDate',
+								widget: 'datetime',
+								format: 'YYYY/MM/DD',
+								date_format: 'YYYY/MM/DD',
+								time_format: false,
+								label: 'Publish Date',
+							},
 							{
 								name: 'description',
 								widget: 'string',
@@ -64,7 +65,7 @@ export default defineConfig({
 								widget: 'image',
 								required: true,
 							},
-              { label: 'Tags', name: 'tags', widget: 'list' },
+							{ label: 'Tags', name: 'tags', widget: 'list' },
 							{ name: 'body', widget: 'markdown', label: 'Post Body' },
 							{
 								label: 'Layout',
