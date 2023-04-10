@@ -1,6 +1,6 @@
 ---
 layout: '../../../layouts/Post.astro'
-title: 关于chatGPT编辑器Cursor引发的Vscode字体样式
+title: 关于chatGPT编辑器Cursor引发的Vscode字体样式,规则
 description: 关于chatGPT编辑器Cursor引发的Vscode字体样式, 规则
 publishDate: 2023/04/07
 featuredImage: '/assets/images/blog/cursorhead.jpg'
