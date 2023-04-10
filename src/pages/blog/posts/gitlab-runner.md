@@ -4,7 +4,7 @@ title: gitlab-runner构建时间过长排查
 description: gitlab-runner最近构建的时间有时候会很长, 仔细排查下原因
 publishDate: 2022/10/11
 featuredImage: '/assets/images/blog/gitlab-runner.jpg'
-tags: ['gitlab', 'gitlab-runner']
+tags: ['Gitlab', 'Gitlab-runner']
 ---
 ### 背景
 - 部门的代码版本管理我采用的是gitlab, 所以在CICD时候为了便捷我采用了gitlab-runner
