@@ -13,7 +13,7 @@ export default defineConfig({
 	// base: '',
 	// Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
 	sitemap: true,
-	server: { port: 8080 },
+	server: { port: 8089 },
 	// Generate sitemap (set to "false" to disable)
 	integrations: [
 		sitemap(),
