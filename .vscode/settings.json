@@ -1,0 +1,18 @@
+{
+	"emmet.triggerExpansionOnTab": true,
+	"editor.tabSize": 2,
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true,
+		"source.fixAll.eslint": true
+	},
+	"eslint.format.enable": true,
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"workbench.editor.enablePreview": false,
+	"prettier.configPath": ".prettierrc.js",
+	"vue.codeActions.enabled": false
+}

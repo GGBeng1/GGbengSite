@@ -3,12 +3,11 @@ import sitemap from '@astrojs/sitemap';
 import vue from '@astrojs/vue';
 import mdx from '@astrojs/mdx';
 import lit from '@astrojs/lit';
-import image from '@astrojs/image';
 import NetlifyCMS from 'astro-netlify-cms';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://www.ggbeng.tech/',
+	site: 'https://www.ggbeng.life/',
 	// outDir: './docs',
 	// base: '',
 	// Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
@@ -23,7 +22,6 @@ export default defineConfig({
 			gfm: true,
 		}),
 		lit(),
-		image(),
 		NetlifyCMS({
 			config: {
 				// Use Netlify’s “Git Gateway” authentication and target our default branch
