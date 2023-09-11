@@ -39,5 +39,5 @@ collections:
           label: Layout,
           name: layout,
           widget: hidden,
-          default: ../../src/layouts/Post.astro,
+          default: ../../../layouts/Post.astro,
         }

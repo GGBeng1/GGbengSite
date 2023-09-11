@@ -6,8 +6,9 @@ featuredImage: /assets/images/blog/Astro3.jpg
 tags:
   - test
   - test1
-layout: ../../src/layouts/Post.astro
+layout: ../../../layouts/Post.astro
 ---
+
 阿斯达阿斯达阿斯达
 
 ![](/assets/images/blog/astro.jpg)
