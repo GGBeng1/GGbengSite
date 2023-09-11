@@ -27,7 +27,12 @@ collections:
           label: Description,
           required: false,
         }
-      - { label: featuredImage, name: thumbnail, widget: image, required: true }
+      - {
+          label: FeaturedImage,
+          name: featuredImage,
+          widget: image,
+          required: true,
+        }
       - { label: Tags, name: tags, widget: list }
       - { name: body, widget: markdown, label: Post Body }
       - {
