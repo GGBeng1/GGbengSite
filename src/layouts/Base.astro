@@ -2,7 +2,6 @@
 import { SkipLink } from '@littlesticks/odyssey-theme-components';
 import BaseHead from '../components/head/BaseHead.astro';
 import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
-import { ViewTransitions } from 'astro:transitions';
 
 export interface Props {
 	seo?: BaseHeadProps;
@@ -14,7 +13,6 @@ const { seo } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead {...seo} />
-		<ViewTransitions />
 	</head>
 	<body>
 		<SkipLink />

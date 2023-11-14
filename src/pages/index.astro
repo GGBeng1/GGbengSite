@@ -3,6 +3,7 @@ import { Container, BlogPostsList } from '@littlesticks/odyssey-theme-components
 import Layout from '../layouts/Page.astro';
 import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
 import { parse, isBefore } from 'date-fns';
+import { ViewTransitions } from 'astro:transitions';
 
 const posts = await Astro.glob('../pages/blog/posts/*.md').then(posts =>
 	posts
@@ -24,6 +25,7 @@ const posts = await Astro.glob('../pages/blog/posts/*.md').then(posts =>
 ---
 
 <Layout>
+	<ViewTransitions />
 	<HomeHeroSection />
 	<Container>
 		<section class="feature-card__section">
