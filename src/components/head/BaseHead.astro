@@ -11,7 +11,8 @@ export interface Props {
 
 const title = Astro.props.title || settings.title;
 const description = Astro.props.description || settings.description;
-const canonicalURL = Astro.props.canonicalURL || new URL(Astro.url.pathname, Astro.site);
+const canonicalURL =
+	Astro.props.canonicalURL || new URL(Astro.url.pathname, Astro.site);
 const image = new URL(Astro.props.image || './social.png', Astro.site);
 ---
 
@@ -72,26 +73,33 @@ const image = new URL(Astro.props.image || './social.png', Astro.site);
 </noscript>
 
 <link rel="stylesheet" href="/styles/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css"
+/>
+<script
+	type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"
+></script>
 <script type="text/javascript">
-  algoliasearchNetlify({
-    appId: 'PISRNYKYIE',
-    apiKey: '7d828371d1552192435727fdf2fb1276',
-    siteId: '58d6ebf4-6582-43fc-a7e7-a1ce4278e8f3',
-    branch: 'main',
-    selector: 'div#docsearch-search-button',
-    detached: false
-  });
+	algoliasearchNetlify({
+		appId: 'PISRNYKYIE',
+		apiKey: '7d828371d1552192435727fdf2fb1276',
+		siteId: '58d6ebf4-6582-43fc-a7e7-a1ce4278e8f3',
+		branch: 'main',
+		selector: 'div#docsearch-search-button',
+		detached: false,
+	});
 </script>
-<script src="https://unpkg.com/giscus?module"></script>
+<!-- <script src="https://unpkg.com/giscus?module"></script> -->
+<!-- <script type="module" src="https://cdn.skypack.dev/giscus"></script> -->
 <!-- For Demonstration of the themes -->
 {settings.enableThemeSwitcher && <ThemeProvider />}
 
 <!-- Google Analytics -->
 <script>
-  var host = window.location.hostname;
-  if(host != 'localhost') {
-    // Place Google Analytics code here.
-  }
+	var host = window.location.hostname;
+	if (host != 'localhost') {
+		// Place Google Analytics code here.
+	}
 </script>

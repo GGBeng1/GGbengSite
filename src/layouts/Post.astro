@@ -3,40 +3,49 @@ import { Container } from '@littlesticks/odyssey-theme-components';
 import Layout from './Page.astro';
 import { generateTagData } from '../utils/helpers';
 
-const {content: {title, description, publishDate, canonicalURL, featuredImage, tags} } = Astro.props;
+const {
+	content: {
+		title,
+		description,
+		publishDate,
+		canonicalURL,
+		featuredImage,
+		tags,
+	},
+} = Astro.props;
 
 const allTagsData = generateTagData(tags);
 
 const seo = {
 	title,
 	description,
-  publishDate,
+	publishDate,
 	canonicalURL,
 	image: featuredImage,
 };
 ---
 
 <Layout seo={seo}>
-  <div class="post-header__container">
-    <ul class="post-tags__list">
-      {allTagsData.map(tag => (
-        <li class="post-tags__tag">
-          <a href={`/blog/tags/${tag.slug}`}>
-            {tag.title}
-          </a>
-        </li>
-      ))}
-    </ul>
-    <h1>{title}</h1>
-    <p class="post-layout__date">
-      <time><em>{publishDate}</em></time>
-    </p>
-    <img class="post-layout__img" src={featuredImage} alt={title} />
-  </div>
-  <Container narrow>
-    <article id="article">
-        <slot></slot>
-        <giscus-widget
+	<div class="post-header__container">
+		<ul class="post-tags__list">
+			{
+				allTagsData.map(tag => (
+					<li class="post-tags__tag">
+						<a href={`/blog/tags/${tag.slug}`}>{tag.title}</a>
+					</li>
+				))
+			}
+		</ul>
+		<h1>{title}</h1>
+		<p class="post-layout__date">
+			<time><em>{publishDate}</em></time>
+		</p>
+		<img class="post-layout__img" src={featuredImage} alt={title} />
+	</div>
+	<Container narrow>
+		<article id="article">
+			<slot />
+			<!-- <giscus-widget
           id="comments"
           repo="GGBeng1/GGbengSite"
           repoid="R_kgDOH5j3qg"
@@ -49,38 +58,53 @@ const seo = {
           inputposition="top"
           theme="light"
           lang="zh-CN"
-          loading="lazy"></giscus-widget>
-    </article>
-  </Container>
+          loading="lazy"></giscus-widget> -->
+			<script
+				src="https://giscus.app/client.js"
+				data-repo="GGBeng1/GGbengSite"
+				data-repo-id="R_kgDOH5j3qg"
+				data-category="Announcements"
+				data-category-id="DIC_kwDOH5j3qs4CRHAo"
+				data-mapping="pathname"
+				data-strict="0"
+				data-reactions-enabled="1"
+				data-emit-metadata="0"
+				data-input-position="bottom"
+				data-theme="preferred_color_scheme"
+				data-lang="zh-CN"
+				crossorigin="anonymous"
+				async></script>
+		</article>
+	</Container>
 </Layout>
 
 <style>
-  #article {
-    padding-bottom: 3rem;
-  }
-  .post-header__container {
-    max-width: var(--theme-blog-post-header-width);
-    margin: 1rem auto;
-    padding: var(--container-padding);
-  }
-  .post-tags__list {
-    margin: 1rem auto;
-    padding: 0;
-    list-style: none;
-  }
-  .post-tags__tag {
-    text-transform: uppercase;
-  }
-  .post-tags__tag a {
-    font-size: var(--font-size-sm);
-    /* text-decoration: none; */
-  }
-  .post-layout__img {
-    margin: 0 auto 1rem auto;
-    border-radius: var(--theme-shape-radius);
-  }
-  .post-layout__date {
-    margin-bottom: 1rem;
-    opacity: 0.84;
-  }
+	#article {
+		padding-bottom: 3rem;
+	}
+	.post-header__container {
+		max-width: var(--theme-blog-post-header-width);
+		margin: 1rem auto;
+		padding: var(--container-padding);
+	}
+	.post-tags__list {
+		margin: 1rem auto;
+		padding: 0;
+		list-style: none;
+	}
+	.post-tags__tag {
+		text-transform: uppercase;
+	}
+	.post-tags__tag a {
+		font-size: var(--font-size-sm);
+		/* text-decoration: none; */
+	}
+	.post-layout__img {
+		margin: 0 auto 1rem auto;
+		border-radius: var(--theme-shape-radius);
+	}
+	.post-layout__date {
+		margin-bottom: 1rem;
+		opacity: 0.84;
+	}
 </style>
