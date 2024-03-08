@@ -14,12 +14,12 @@ collections:
     fields:
       - { name: title, widget: string, label: Post Title }
       - {
-          name: publishDate,
+          name: pubDate,
           widget: datetime,
           format: YYYY/MM/DD,
           date_format: YYYY/MM/DD,
           time_format: false,
-          label: Publish Date,
+          label: PubDate,
         }
       - {
           name: description,

@@ -1,6 +1,6 @@
 ---
 title: GitLab的CICD与钉钉消息结合
-publishDate: 2024/01/17
+pubDate: 2024/01/17
 description: GitLab的CICD与钉钉消息结合
 featuredImage: /assets/images/blog/xnip2024-02-26_16-11-43.jpg
 tags:
@@ -8,17 +8,18 @@ tags:
   - dingtalk
 layout: ../../../layouts/Post.astro
 ---
+
 # 背景
 
-* 随着公司项目的增多, 团队人数的增加, 急需流水线构建成功还是失败的消息通知. 公司团队采用钉钉, 最方便的还是使用钉钉机器人发送群消息, 消息的内容需要涵盖项目名称, 构建时长(用来发现问题), 构建人, 构建状态等等...
+- 随着公司项目的增多, 团队人数的增加, 急需流水线构建成功还是失败的消息通知. 公司团队采用钉钉, 最方便的还是使用钉钉机器人发送群消息, 消息的内容需要涵盖项目名称, 构建时长(用来发现问题), 构建人, 构建状态等等...
 
 # 结合GitLabCICD
 
-* 公司内部的发布部署一直是采用GitLab-runner及docker实现的的发布Nginx镜像, 所以要想实现需求需要结合配置文件修改. 同时还要考虑未来及过往项目的兼容, 所以最简单的办法就是使用`.gitlab-ci.yml`中的`include`字段
+- 公司内部的发布部署一直是采用GitLab-runner及docker实现的的发布Nginx镜像, 所以要想实现需求需要结合配置文件修改. 同时还要考虑未来及过往项目的兼容, 所以最简单的办法就是使用`.gitlab-ci.yml`中的`include`字段
 
 # 实现
 
-* 我们在现有的项目配置中添加以下配置
+- 我们在现有的项目配置中添加以下配置
 
 ```yml
 # 集成通知脚本
@@ -28,7 +29,7 @@ include:
     file: dingtalk.yml
 ```
 
-* 同时我们去xxx分组下创建`gitlab-ci`项目, 创建`main`分支, 创建`dingtalk.yml`文件
+- 同时我们去xxx分组下创建`gitlab-ci`项目, 创建`main`分支, 创建`dingtalk.yml`文件
 
 ```yml
 # 钉钉消息发送模版任务

@@ -1,6 +1,7 @@
 ---
 import settings from '../../config/settings.js';
 import ThemeProvider from '../theme-switcher/ThemeProvider.astro';
+import { ViewTransitions } from 'astro:transitions';
 
 export interface Props {
 	title?: string;
@@ -103,3 +104,4 @@ const image = new URL(Astro.props.image || './social.png', Astro.site);
 		// Place Google Analytics code here.
 	}
 </script>
+<ViewTransitions />
