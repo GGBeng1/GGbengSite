@@ -1,5 +1,7 @@
 ## GGbengSite
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/58d6ebf4-6582-43fc-a7e7-a1ce4278e8f3/deploy-status)](https://app.netlify.com/sites/ggbengsite/deploys)
+
 - 采用 `Astro` 开发的个人网站
 - 使用 `algolia` 进行搜索 🔍
 - 采用 `giscus` 进行留言,讨论 🌈
