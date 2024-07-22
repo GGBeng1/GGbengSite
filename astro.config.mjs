@@ -6,7 +6,7 @@ import lit from '@astrojs/lit';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://www.ggbeng.life/',
+	site: 'https://www.ggbeng.today/',
 	// outDir: './docs',
 	// base: '',
 	// Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
