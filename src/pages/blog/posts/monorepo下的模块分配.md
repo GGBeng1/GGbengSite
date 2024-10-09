@@ -2,13 +2,12 @@
 title: Monorepo下的模块分配
 pubDate: 2024/10/09
 description: Monorepo下的模块分配
-featuredImage: /assets/images/blog/turbo.jpg
+featuredImage: /assets/images/blog/turbo.png
 tags:
   - monorepo
   - turborepo
 layout: ../../../layouts/Post.astro
 ---
-
 # 背景
 
 随着项目的模块的增多，我们的项目也变得越来越庞大，这时候我们就需要考虑如何将项目进行拆分，以便于维护和开发。在这里我们就来讨论一下monorepo下的模块分配。
