@@ -6,6 +6,7 @@
 		"experimentalDecorators": true,
 		"useDefineForClassFields": false,
 		"types": ["vite/client"],
-		"allowJs": true
+		"allowJs": true,
+		"include": ["src/**/*"]
 	}
 }
