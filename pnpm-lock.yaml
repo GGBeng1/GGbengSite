@@ -13,7 +13,7 @@ importers:
         version: 4.0.0(@types/react-dom@18.3.2)(@types/react@18.3.14)(jiti@1.21.6)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(yaml@2.6.1)
       '@petercatai/assistant':
         specifier: ^1.0.18
-        version: 1.0.18(@emotion/react@11.13.5(@types/react@18.3.14)(react@19.0.0))(@types/react@18.3.14)(date-fns@4.1.0)(postcss@8.4.18)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 1.0.18(@emotion/react@11.13.5(@types/react@18.3.14)(react@19.0.0))(@types/react@18.3.14)(date-fns@4.1.0)(postcss@8.4.49)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@webcomponents/template-shadowroot':
         specifier: ^0.2.1
         version: 0.2.1
@@ -66,6 +66,9 @@ importers:
       svgo:
         specifier: 2.8.0
         version: 2.8.0
+      vite-plugin-commonjs:
+        specifier: ^0.10.4
+        version: 0.10.4
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@4.6.4)
@@ -2004,11 +2007,6 @@ packages:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
-
-  acorn@8.12.1:
-    resolution: {integrity: sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==}
-    engines: {node: '>=0.4.0'}
-    hasBin: true
 
   acorn@8.14.0:
     resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
@@ -5612,6 +5610,12 @@ packages:
     peerDependencies:
       vite: ^2.6.0 || ^3.0.0 || ^4.0.0 || ^5.0.0-0 || ^6.0.0-0
 
+  vite-plugin-commonjs@0.10.4:
+    resolution: {integrity: sha512-eWQuvQKCcx0QYB5e5xfxBNjQKyrjEWZIR9UOkOV6JAgxVhtbZvCOF+FNC2ZijBJ3U3Px04ZMMyyMyFBVWIJ5+g==}
+
+  vite-plugin-dynamic-import@1.6.0:
+    resolution: {integrity: sha512-TM0sz70wfzTIo9YCxVFwS8OA9lNREsh+0vMHGSkWDTZ7bgd1Yjs5RV8EgB634l/91IsXJReg0xtmuQqP0mf+rg==}
+
   vite-plugin-inspect@0.8.8:
     resolution: {integrity: sha512-aZlBuXsWUPJFmMK92GIv6lH7LrwG2POu4KJ+aEdcqnu92OAf+rhBnfMDQvxIJPEB7hE2t5EyY/PMgf5aDLT8EA==}
     engines: {node: '>=14'}
@@ -6133,8 +6137,8 @@ snapshots:
     dependencies:
       '@astrojs/micromark-extension-mdx-jsx': 1.0.3
       '@astrojs/prism': 1.0.2
-      acorn: 8.12.1
-      acorn-jsx: 5.3.2(acorn@8.12.1)
+      acorn: 8.14.0
+      acorn-jsx: 5.3.2(acorn@8.14.0)
       github-slugger: 1.4.0
       hast-util-to-html: 8.0.4
       import-meta-resolve: 2.1.0
@@ -7504,7 +7508,7 @@ snapshots:
     dependencies:
       parse5: 7.1.2
 
-  '@petercatai/assistant@1.0.18(@emotion/react@11.13.5(@types/react@18.3.14)(react@19.0.0))(@types/react@18.3.14)(date-fns@4.1.0)(postcss@8.4.18)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@petercatai/assistant@1.0.18(@emotion/react@11.13.5(@types/react@18.3.14)(react@19.0.0))(@types/react@18.3.14)(date-fns@4.1.0)(postcss@8.4.49)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@ant-design/icons': 5.5.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@ant-design/pro-chat': 1.15.3(@types/react@18.3.14)(antd-style@3.7.1(@types/react@18.3.14)(antd@5.22.3(date-fns@4.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(antd@5.22.3(date-fns@4.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -7521,7 +7525,7 @@ snapshots:
       react-dom: 19.0.0(react@19.0.0)
       swr: 2.2.5(react@19.0.0)
       tailwindcss: 3.4.16
-      tailwindcss-scoped-preflight: 3.4.9(postcss@8.4.18)(tailwindcss@3.4.16)
+      tailwindcss-scoped-preflight: 3.4.9(postcss@8.4.49)(tailwindcss@3.4.16)
     transitivePeerDependencies:
       - '@emotion/react'
       - '@types/react'
@@ -8306,15 +8310,9 @@ snapshots:
 
   '@webcomponents/template-shadowroot@0.2.1': {}
 
-  acorn-jsx@5.3.2(acorn@8.12.1):
-    dependencies:
-      acorn: 8.12.1
-
   acorn-jsx@5.3.2(acorn@8.14.0):
     dependencies:
       acorn: 8.14.0
-
-  acorn@8.12.1: {}
 
   acorn@8.14.0: {}
 
@@ -12687,9 +12685,9 @@ snapshots:
 
   tabbable@6.2.0: {}
 
-  tailwindcss-scoped-preflight@3.4.9(postcss@8.4.18)(tailwindcss@3.4.16):
+  tailwindcss-scoped-preflight@3.4.9(postcss@8.4.49)(tailwindcss@3.4.16):
     dependencies:
-      postcss: 8.4.18
+      postcss: 8.4.49
       tailwindcss: 3.4.16
 
   tailwindcss@3.4.16:
@@ -12995,6 +12993,19 @@ snapshots:
   vite-hot-client@0.2.4(vite@5.4.11):
     dependencies:
       vite: 5.4.11
+
+  vite-plugin-commonjs@0.10.4:
+    dependencies:
+      acorn: 8.14.0
+      magic-string: 0.30.14
+      vite-plugin-dynamic-import: 1.6.0
+
+  vite-plugin-dynamic-import@1.6.0:
+    dependencies:
+      acorn: 8.14.0
+      es-module-lexer: 1.5.4
+      fast-glob: 3.3.2
+      magic-string: 0.30.14
 
   vite-plugin-inspect@0.8.8(rollup@4.28.0)(vite@5.4.11):
     dependencies:
