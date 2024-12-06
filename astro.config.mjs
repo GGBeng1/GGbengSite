@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 import vue from '@astrojs/vue';
 import mdx from '@astrojs/mdx';
 import lit from '@astrojs/lit';
-
+import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://www.ggbeng.today/',
@@ -22,6 +22,7 @@ export default defineConfig({
 		}),
 		lit(),
 		vue(),
+		react(),
 	], // Add renderers to the config
 	vite: {
 		server: {

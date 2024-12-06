@@ -2,6 +2,7 @@
 	"name": "ggbengsite",
 	"version": "1.0.0",
 	"private": false,
+	"type": "module",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
@@ -27,6 +28,10 @@
 		"vue": "^3.5.13"
 	},
 	"dependencies": {
-		"@webcomponents/template-shadowroot": "^0.2.1"
+		"@astrojs/react": "^4.0.0",
+		"@petercatai/assistant": "^1.0.18",
+		"@webcomponents/template-shadowroot": "^0.2.1",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
 	}
 }
