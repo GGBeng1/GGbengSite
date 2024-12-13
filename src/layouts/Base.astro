@@ -1,28 +1,29 @@
 ---
-import { SkipLink } from "@littlesticks/odyssey-theme-components";
-import BaseHead from "../components/head/BaseHead.astro";
-import type { Props as BaseHeadProps } from "../components/head/BaseHead.astro";
-import Pie from "../components/head/pie.jsx";
-
+import { SkipLink } from '@littlesticks/odyssey-theme-components';
+import BaseHead from '../components/head/BaseHead.astro';
+import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
+import Pie from '../components/head/pie.jsx';
+import PageFind from '../components/PageFind/PageFind.astro';
 export interface Props {
-  seo?: BaseHeadProps;
+	seo?: BaseHeadProps;
 }
 
 const { seo } = Astro.props;
 ---
 
 <html lang="en">
-  <head>
-    <BaseHead {...seo} />
-  </head>
-  <body>
-    <SkipLink />
-    <slot name="announcement-bar" />
-    <main id="content">
-      <slot name="header" />
-      <slot />
-    </main>
-    <slot name="footer" />
-    <Pie client:only="react" />
-  </body>
+	<head>
+		<BaseHead {...seo} />
+	</head>
+	<body>
+		<SkipLink />
+		<slot name="announcement-bar" />
+		<main id="content">
+			<slot name="header" />
+			<slot />
+		</main>
+		<slot name="footer" />
+		<Pie client:only="react" />
+		<PageFind />
+	</body>
 </html>

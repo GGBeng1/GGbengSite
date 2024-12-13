@@ -5,7 +5,8 @@ import mdx from '@astrojs/mdx';
 import lit from '@astrojs/lit';
 import react from '@astrojs/react';
 import commonjs from 'vite-plugin-commonjs'
-
+import pagefind from "astro-pagefind";
+// import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://www.ggbeng.today/',
@@ -16,6 +17,7 @@ export default defineConfig({
 	server: { port: 8089 },
 	// Generate sitemap (set to "false" to disable)
 	integrations: [
+		// tailwind(),
 		sitemap(),
 		mdx({
 			extendMarkdownConfig: false,
@@ -25,6 +27,7 @@ export default defineConfig({
 		lit(),
 		vue(),
 		react(),
+		pagefind()
 	], // Add renderers to the config
 	vite: {
 		server: {
@@ -41,7 +44,6 @@ export default defineConfig({
 				{
 					filter(id) {
 						if (id.includes('node_modules/@petercatai/assistant')) {
-							console.log('commonjs:', id);
 							return true
 						}
 					}

@@ -7,7 +7,7 @@
 		"useDefineForClassFields": false,
 		"types": ["vite/client"],
 		"allowJs": true,
-		"include": ["src/**/*"],
-		"jsx": "react",
-	}
+		"jsx": "react"
+	},
+	"include": ["src/**/*"]
 }
