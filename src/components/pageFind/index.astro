@@ -60,13 +60,16 @@ import Search from 'astro-pagefind/components/Search';
 		}
 
 		function onDocumentClick(event) {
-			if (event.target.classList.contains('pagefind-ui__result')) {
+			if (
+				event.target.classList.contains('pagefind-ui__result') &&
+				!event.target.classList.contains('pagefind-ui__button ')
+			) {
 				closePagefind();
 			}
 		}
 
 		function onBackdropClick(event) {
-			if (!event.target.closest('#pagefind-container')) {
+			if (event.target === backdrop) {
 				closePagefind();
 			}
 		}
