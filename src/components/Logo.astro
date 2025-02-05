@@ -1,9 +1,10 @@
 ---
 const { type } = Astro.props;
+const nowYear = new Date().getFullYear();
 ---
 
 <p class="odyssey-logo">GGbeng</p>
-<p style="font-size: 14px;">{type ? '© 2019-2025' : ''}</p>
+<p style="font-size: 14px;">{type ? '© 2019-' + nowYear : ''}</p>
 
 <style>
 	.odyssey-logo {
