@@ -1,8 +1,9 @@
 ---
-
+const { type } = Astro.props;
 ---
 
 <p class="odyssey-logo">GGbeng</p>
+<p style="font-size: 14px;">{type ? '© 2019-2025' : ''}</p>
 
 <style>
 	.odyssey-logo {
