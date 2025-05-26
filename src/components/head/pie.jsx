@@ -4,7 +4,7 @@ import './style.css'; // 确认实际路径
 const Pie = () => {
 	return (
 		<Assistant
-			token="d1b94d2c-4893-4862-8351-f9b6632c2492"
+			token="d27b92a3-5bde-412a-bce3-d3b6b4113b43"
 			apiDomain="https://api.petercat.ai"
 		/>
 	);

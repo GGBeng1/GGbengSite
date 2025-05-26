@@ -9,7 +9,7 @@ import pagefind from "astro-pagefind";
 // import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://www.ggbeng.today/',
+	site: 'https://www.ggbeng.tech/',
 	// outDir: './docs',
 	// base: '',
 	// Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
