@@ -1,0 +1,49 @@
+name: Netlify Post-Build Release
+
+on:
+  workflow_run:
+    workflows: ["Netlify Post-Build Release"]
+    types:
+      - completed
+
+jobs:
+  check_and_release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 显式授予写入权限
+    if: >
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Update package.json version
+        run: npm version patch -m "Bump version to %s [skip ci]"
+
+      # ------------------- 关键修复点 -------------------
+      # 先获取版本号，才能在下一步使用
+      - name: Get new version
+        id: get_version # 定义 id
+        run: echo "::set-output name=version::$(jq -r .version package.json)"
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          # 现在可以正确引用 get_version 的输出
+          tag_name: "v${{ steps.get_version.outputs.version }}"
+          name: "Release ${{ steps.get_version.outputs.version }}"
+          body: "This is an automatic release triggered by a successful Netlify build."
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
