@@ -4,6 +4,9 @@ import BaseHead from '../components/head/BaseHead.astro';
 import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
 import Pie from '../components/head/pie.jsx';
 import PageFind from '../components/pageFind/index.astro';
+import ThemeProvider from '../components/theme-switcher/ThemeProvider.astro';
+import { ViewTransitions } from 'astro:transitions';
+
 export interface Props {
 	seo?: BaseHeadProps;
 }
@@ -14,8 +17,11 @@ const { seo } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead {...seo} />
+		<ViewTransitions />
 	</head>
 	<body>
+		<!-- Ensure theme is initialized on the client and after view transitions -->
+		<ThemeProvider />
 		<SkipLink />
 		<slot name="announcement-bar" />
 		<main id="content">
