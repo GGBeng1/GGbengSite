@@ -2,12 +2,20 @@
 
 ---
 
-<!-- This is a simple script to check if there is a theme value in local storage. That way the theme stays with you between pages -->
-<script>
-	const doc = document.firstElementChild;
-	const localStorageTheme = localStorage.getItem('theme');
+<!-- This script ensures theme persists across ViewTransitions navigation without flashing -->
+<script is:inline>
+	function applyTheme() {
+		const doc = document.firstElementChild;
+		const localStorageTheme = localStorage.getItem('theme');
 
-	if (localStorageTheme !== null) {
-		doc.setAttribute('data-theme', localStorageTheme);
+		if (localStorageTheme !== null) {
+			doc.setAttribute('data-theme', localStorageTheme);
+		}
 	}
+
+	// Apply theme on initial load
+	applyTheme();
+
+	// Re-apply theme immediately after DOM swap (before rendering)
+	document.addEventListener('astro:after-swap', applyTheme);
 </script>
