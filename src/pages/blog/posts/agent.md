@@ -3,7 +3,7 @@ layout: '../../../layouts/Post.astro'
 title: 做一个兼容 Claude Code 的内部 Agent 平台
 description: 公司内部需要一套能自己部署、自己换模型、还能挂进 IM 用的 Agent 工具，于是把 Claude Code 的交互内核重写成自己的服务，套上桌面端和 IM 接入，再往上做了几个带规矩约束的领域知识库工作台。
 pubDate: 2026/06/23
-featuredImage: '/assets/images/blog/img_2309.jpg'
+featuredImage: '/assets/images/blog/img_2309.png'
 tags: ['Agent', 'Claude Code', 'LLM']
 ---
 
