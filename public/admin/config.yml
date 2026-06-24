@@ -3,7 +3,7 @@ backend:
   branch: main
 media_folder: public/assets/images/blog
 public_folder: /assets/images/blog
-site_url: 'https://ggbengsite.netlify.app'
+site_url: 'https://ggbeng.netlify.app'
 collections:
   - name: posts
     label: Blog Posts
